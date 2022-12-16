@@ -8,7 +8,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="grid grid-cols-2 h-screen w-screen">
+    <form class="grid grid-cols-2 h-screen w-screen" id="mailAndpw">
       <div class="grid grid-cols-2 grid-rows-9 py-32 px-28 h-full w-full gap-1">
         <div class="col-span-2 flex items-center text-3xl font-semibold">
           <h2>Welcome back, user!</h2>
@@ -19,19 +19,25 @@
         <div
           class="col-span-2 flex items-center justify-center rounded-[9px] border-gray-400 border-2"
         >
-          <button>
-            <img src="" alt="" />
+          <button class="flex items-center justify-center gap-2">
+            <img
+              class="h-[24px] w-[24px]"
+              src="assets/icons8-google-logo-96.png"
+              alt=""
+            />
             <p>Login with google</p>
           </button>
         </div>
         <div class="col-span-2 flex items-center justify-center">
           <p>or</p>
         </div>
+
         <div class="col-span-2">
           <input
             type="email"
             class="flex items-center w-full border-b-2 h-full"
             placeholder="Email"
+            name="email"
           />
         </div>
         <div class="col-span-2">
@@ -39,17 +45,22 @@
             type="password"
             class="flex items-center w-full border-b-2 h-full"
             placeholder="Password"
+            name="pw"
           />
         </div>
+
         <div class="flex items-center text-[14px] gap-1">
-          <input type="checkbox" name="" id="" />
+          <input type="checkbox" name="" />
           <p>Remember for 30 days</p>
         </div>
         <div class="flex items-center justify-end text-[14px]">
           <a href="#"> <p>Forgot password?</p> </a>
         </div>
 
-        <button class="bg-black text-white rounded-[9px] col-span-2">
+        <button
+          class="bg-black text-white rounded-[9px] col-span-2"
+          type="submit"
+        >
           <p>Log in</p>
         </button>
 
@@ -58,13 +69,38 @@
           <a href="#" class="font-semibold">Sign up for Free</a>
         </div>
       </div>
+
       <div
-        class="grid grid-cols-1 grid-rows-4 pt-[370px] px-20 h-full w-full gap-1"
+        class="grid grid-cols-2 grid-rows-4 pt-[370px] px-20 h-full w-full gap-1 bg-[url('assets/Pub.png')]"
       >
-        <div class="bg-red-300 col-span-2 row-span-2"></div>
-        <div class="bg-red-300 col-span-2"></div>
-        <div class="bg-red-300 col-span-2"></div>
+        <div
+          class="col-span-2 row-span-2 text-[32px] text-white flex items-center"
+        >
+          We move 20x faster than our peers and stay consistent. While they're
+          bogged down with design debt, we're releasing new features.
+        </div>
+        <div
+          class="text-[32px] text-white flex items-center justify-start col-span-1"
+        >
+          <p>Name Surname</p>
+        </div>
+        <div class="flex items-center justify-end col-span-1">
+          Generic image
+        </div>
+        <div>
+          <p>Founder, Catalogue</p>
+          <p>Web Desigen Agency</p>
+        </div>
+        <div class="flex h-full w-full items-center justify-end gap-6">
+          <button>
+            <img class="h-[54px] w-[54px]" src="assets/arrow1.svg" />
+          </button>
+          <button>
+            <img class="h-[54px] w-[54px]" src="assets/arrow2.svg" />
+          </button>
+        </div>
       </div>
-    </div>
+    </form>
+    <script type="module" src="main.ts"></script>
   </body>
 </html>

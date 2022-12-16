@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve:db": "json-server --host 0.0.0.0 --port 3000 -w db.json --no-cors"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "tailwindcss": "^3.2.4"
+    "axios": "^1.2.1",
+    "tailwindcss": "^3.2.4",
+    "vite": "^4.0.1"
   }
 }
