@@ -4,6 +4,17 @@
       "id": 1,
       "title": "json-server",
       "author": "typicode"
+    },
+    {
+      "email": "nils@test.de",
+      "pw": "test",
+      "id": 2
+    },
+    {
+      "email": "nils@test.de",
+      "pw": "test",
+      "checkbox": "on",
+      "id": 3
     }
   ],
   "comments": [
@@ -16,5 +27,7 @@
   "profile": {
     "name": "typicode"
   },
-  "users": [{}]
+  "users": [
+    {}
+  ]
 }
