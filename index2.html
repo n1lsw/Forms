@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="grid grid-cols-2 h-screen w-screen" id="mailAndpw">
+      <div class="grid grid-cols-2 grid-rows-9 py-32 px-28 h-full w-full gap-1">
+        <a href="index.html">
+          <img class="h-[54px] w-[54px]" src="assets/arrow1.svg" />
+        </a>
+
+        <div class="col-span-2">
+          <input
+            type="email"
+            class="flex items-center w-full border-b-2 h-full"
+            placeholder="Email"
+            name="email"
+          />
+        </div>
+        <div class="col-span-2">
+          <input
+            type="password"
+            class="flex items-center w-full border-b-2 h-full"
+            placeholder="Password"
+            name="pw"
+          />
+        </div>
+
+        <div class="flex items-center text-[14px] gap-1">
+          <input type="checkbox" name="checkbox" />
+          <p>Remember for 30 days</p>
+        </div>
+        <div class="flex items-center justify-end text-[14px]">
+          <a href="#"> <p>Forgot password?</p> </a>
+        </div>
+
+        <button
+          class="bg-black text-white rounded-[9px] col-span-2"
+          type="submit"
+        >
+          <p>Register</p>
+        </button>
+
+        <div class="col-span-2 flex justify-center gap-2 text-[12px]"></div>
+      </div>
+
+      <div
+        class="grid grid-cols-2 grid-rows-4 pt-[370px] px-20 h-full w-full gap-1 bg-red-500"
+      >
+        <div
+          class="col-span-2 row-span-2 text-[32px] text-white flex items-center"
+        >
+          We move 20x faster than our peers and stay consistent. While they're
+          bogged down with design debt, we're releasing new features.
+        </div>
+        <div
+          class="text-[32px] text-white flex items-center justify-start col-span-1"
+        >
+          <p>Name Surname</p>
+        </div>
+        <div class="flex items-center justify-end col-span-1">
+          <!-- Generic image -->
+        </div>
+        <div>
+          <p>Founder, Catalogue</p>
+          <p>Web Desigen Agency</p>
+        </div>
+        <div class="flex h-full w-full items-center justify-end gap-6">
+          <button type="button">
+            <img class="h-[54px] w-[54px]" src="assets/arrow1.svg" />
+          </button>
+          <button type="button">
+            <img class="h-[54px] w-[54px]" src="assets/arrow2.svg" />
+          </button>
+        </div>
+      </div>
+    </form>
+    <script type="module" src="main.ts"></script>
+  </body>
+</html>

@@ -3,5 +3,12 @@
   "profile": {
     "name": "typicode"
   },
-  "users": []
+  "users": [
+    {
+      "email": "nils@test.de",
+      "pw": "test1",
+      "checkbox": "on",
+      "id": 1
+    }
+  ]
 }

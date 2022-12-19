@@ -19,11 +19,16 @@ form.addEventListener("submit", async (event) => {
     `http://0.0.0.0:3000/users?email=${data.email}`
   );
 
-  if (data.pw.length == 0) {
-    alert("pls enter pw");
+  // const accountName = data.find(
+  //   (obj) => obj.email === data.email && obj.password === data.pw
+  // );
+
+  if (data.pw.length == 0 || data.email.length == 0) {
+    alert(data.pw.length == 0 ? "pls enter pw" : "please enter mail");
   } else {
     if (mailcheck.data.length > 0) {
-      alert("user already there");
+      alert("Cool, you are alredy a member. You can now use our member area");
+      // window.location.href = "www.google.de";
     } else {
       const user: Record<string, any> = await axios.post(
         "http://0.0.0.0:3000/users",
