@@ -8,17 +8,34 @@ form.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const formData = new FormData(form);
+  // console.log("ok" + formData);
   const fromEntries = formData.entries();
   const data = Object.fromEntries(formData.entries()) as Record<
     string,
     string | string[]
   >;
 
-  const user: Record<string, any> = await axios.post(
-    "http://0.0.0.0:3000/posts",
-    data
+  const mailcheck = await axios.get(
+    `http://0.0.0.0:3000/users?email=${data.email}`
   );
-  console.log(user.data);
 
-  alert(`Successfully registered! Your user id is: ${user.data.id}`);
+  console.log("Password length is " + data.pw.length);
+
+  if (data.pw.length == 0) {
+    alert("pls enter pw");
+  } else {
+    // console.log(String("Your entered mail is " + data.email));
+
+    if (mailcheck.data.length > 0) {
+      alert("user already there");
+    } else {
+      const user: Record<string, any> = await axios.post(
+        "http://0.0.0.0:3000/users",
+        data
+      );
+      // console.log(user.data);
+
+      alert(`Successfully registered! Your user id is: ${user.data.id}`);
+    }
+  }
 });
