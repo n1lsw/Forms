@@ -3,21 +3,5 @@
   "profile": {
     "name": "typicode"
   },
-  "users": [
-    {
-      "email": "nils@test.de",
-      "pw": "password",
-      "id": 1
-    },
-    {
-      "email": "abc@test.de",
-      "pw": "fsdf",
-      "id": 2
-    },
-    {
-      "email": "abcgdfgdfg@test.de",
-      "pw": "sdfd",
-      "id": 3
-    }
-  ]
+  "users": []
 }
